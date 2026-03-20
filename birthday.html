@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+    color: white;
+}
+
+/* Center content */
+.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+/* Responsive text */
+h1 {
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+p {
+    font-size: clamp(16px, 3vw, 22px);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: clamp(14px, 2.5vw, 20px);
+    border-radius: 30px;
+    text-decoration: none;
+    background: white;
+    color: #ff4081;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4081;
+    color: white;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Dr Alima🎂</h1>
+    <p>Happy Birthday my Girl♥️🫂✨You are not just my best friend, but my forever person...🫶💫you understand me without words and that's something truly special....🫠🫂every moment with you is priceless✨whether we're laughing nonstop😍, sharing deep emotion talks🌝or simply sitting in comfortable silence🧿. I whis you endless happiness, sucess,Good health and all love in the world💖😍.....may all your dreams come true🎀, and may life always keep you smiling☺️.Love you always and forever❤️‍🩹.....miss you lots and lots🥺🍀....our bond never fade with or without convo🌝....I always stands with you forever and ever with you dr✨♥️</p>
+
+    <!-- LINK -->
+    <a href="gallary.html" class="btn">Surprise 🎁</a>
+</div>
+
+<script>
+// Floating hearts
+function createHeart() {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
+

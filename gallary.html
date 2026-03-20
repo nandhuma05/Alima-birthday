@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memories 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3,  #fad0c4);
+    color: white;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: clamp(28px, 5vw, 50px);
+}
+
+/* Slideshow */
+.slideshow {
+    margin-top: 20px;
+}
+
+.slideshow img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.slideshow img.active {
+    display: block;
+    margin: auto;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    border-radius: 25px;
+    text-decoration: none;
+    background: white;
+    color: #764ba2;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #764ba2;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 our best memory 💖</h1>
+
+<!-- SLIDESHOW -->
+<div class="slideshow">
+   <img src="photo1.jpg.jpeg" class="active">
+    <img src="pic 2.jpg.jpeg">
+    <img src="pic 3.jpg.jpeg">
+    <img src="pic 4.jpg.jpeg">
+    <img src="pic 5.jpg.jpeg">
+    <img src="pic 6.jpg.jpeg">
+    <img src="pic 7.jpg.jpeg">
+    <img src="pic 8.jpg.jpeg">
+    <img src="pic 9.jpg.jpeg">
+    <img src="pic 10.jpg.jpeg">
+    <img src="pic 11.jpg.jpeg">
+</div>
+
+<!-- BACK -->
+<a href="index.html" class="btn">⬅ Back</a>
+
+<script>
+// Slideshow
+let slides = document.querySelectorAll(".slideshow img");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 2000);
+</script>
+
+</body>
+</html>
